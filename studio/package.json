@@ -1,15 +1,20 @@
 {
   "private": true,
-  "name": "sanity-gatsby-portfolio-studio",
+  "name": "grapevine-studio",
   "version": "1.0.1",
   "main": "package.json",
-  "author": "Sanity <hello@sanity.io>",
+  "author": "Hey Nova <info@heynova.io>",
+  "engines": {
+    "node": "10.x"
+  },
   "scripts": {
+    "deploy": "npm run graphql-deploy && npm run sanity-deploy",
     "dev": "sanity start",
     "format": "prettier-eslint --write \"**/*.js\" \"!node_modules/**\"",
     "build": "sanity build",
     "graphql-deploy": "sanity graphql deploy --playground",
     "lint": "eslint .",
+    "build": "sanity build",
     "test": "sanity check"
   },
   "dependencies": {
@@ -25,6 +30,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-icons": "^3.7.0",
     "sanity-plugin-dashboard-widget-document-list": "^0.0.8",
     "sanity-plugin-dashboard-widget-netlify": "^1.0.1"
   },

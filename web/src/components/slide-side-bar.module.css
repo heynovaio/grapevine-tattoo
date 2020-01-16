@@ -1,0 +1,109 @@
+@import '../styles/media-queries.css';
+
+.root {
+  box-sizing: border-box;
+  max-width: 960px;
+  padding: 1.5em;
+  margin: 0 auto;
+
+  @media (--media-min-small) {
+    padding: 2em;
+  }
+}
+
+.sideBar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  min-height: 600px;
+  background-color: #1c2127;
+  z-index: 4;
+  min-width: 80px;
+  max-height: 900px;
+}
+
+.toggleNavButton {
+  color: #ca9b46;
+  appearance: none;
+  font-size: 54px;
+  border: none;
+  background: none;
+  margin: 0;
+  outline: none;
+  padding: 26px 20px 20px;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+
+  & span {
+    border-bottom: solid 3px #ca9b46;
+    width: 26px;
+    display: block;
+    margin-bottom: 8px;
+    &:first-child,
+    &:last-child {
+      width: 41px;
+    }
+  }
+
+  & svg {
+    display: block;
+  }
+
+}
+
+.nav {
+  display: none;
+  padding-top: 100px;
+  text-align: center;
+
+  @nest & ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100vw;
+  }
+
+  @nest & ul li a {
+    font-size: 34px;
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    color: #fff;
+    padding: 22px 0;
+    font-family: p22-underground, sans-serif;
+  }
+
+  @media (hover: hover) {
+    @nest & ul li a:hover {
+      color: #ca9b46;
+    }
+  }
+
+  @media (--media-max-small) {
+    list-style: none;
+    left: 0;
+    right: 0;
+    top: 4rem;
+
+    @nest & ul {
+      padding: 1rem 0;
+    }
+
+    @nest & ul li a {
+      padding: 0.5rem 1.5rem;
+    }
+  }
+
+  @media (--media-min-small) {
+
+    @nest & ul li a {
+      padding: 1.5rem;
+    }
+  }
+}
+
+.showNav {
+  display: block;
+}

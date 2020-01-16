@@ -20,6 +20,20 @@ module.exports = {
         watchMode: !isProd,
         overlayDrafts: !isProd && token
       }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    `gatsby-transformer-sharp`,
+     {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: `grapevinetattoo`,
+      },
     }
   ]
 }

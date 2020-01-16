@@ -1,0 +1,74 @@
+.root {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  @nest & div {
+    position: relative;
+    overflow: hidden;
+    transition: all .25s;
+  }
+  @nest &:hover {
+    @nest & img {
+      transform: scale(1.2);
+    }
+    @nest & div:after {
+      background: rgba(202,154,69, .23);
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+  }
+}
+
+.link {
+  color: #ca9b46;
+  display: inline-block;
+  border-bottom: 1px solid #ca9b46;
+  font-size: 18px;
+  text-decoration: none;
+  margin-bottom: 60px;
+}
+
+.gridTitle {
+  composes: gridTitle from './typography.module.css';
+}
+
+.gridSubTitle {
+  composes: gridSubTitle from './typography.module.css';
+}
+
+.leadMediaThumb {
+  position: relative;
+  padding-bottom: 50%;
+  background: #eee;
+
+  @nest & img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .25s;
+    filter: contrast(1.4) grayscale(1);
+  }
+}
+
+.title {
+  @media (hover: hover) {
+    @nest .root:hover & {
+      text-decoration: underline;
+    }
+  }
+}
+
+.excerpt {
+  @nest & p {
+    margin: 0.5em 0;
+  }
+
+  @nest & strong {
+    font-weight: 600;
+  }
+}

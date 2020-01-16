@@ -1,15 +1,16 @@
 import S from '@sanity/desk-tool/structure-builder'
-import MdSettings from 'react-icons/lib/md/settings'
+import { MdBusiness, MdSettings } from 'react-icons/md'
+import { FaFile } from 'react-icons/fa'
 
 const hiddenDocTypes = listItem =>
-  !['category', 'person', 'sampleProject', 'siteSettings'].includes(listItem.getId())
+  !['category', 'companyInfo', 'page', 'person', 'artist', 'guestArtist','post', 'project', 'siteSettings'].includes(listItem.getId())
 
 export default () =>
-  S.list()
+S.list()
     .title('Content')
     .items([
       S.listItem()
-        .title('Settings')
+        .title('Site Settings')
         .child(
           S.editor()
             .id('siteSettings')
@@ -18,19 +19,64 @@ export default () =>
         )
         .icon(MdSettings),
       S.listItem()
-        .title('Sample projects')
-        .schemaType('sampleProject')
-        .child(S.documentTypeList('sampleProject').title('Sample projects')),
+        .title('Company Info')
+        .child(
+          S.editor()
+            .id('companyInfo')
+            .schemaType('companyInfo')
+            .documentId('companyInfo')
+        )
+        .icon(MdBusiness),
       S.listItem()
-        .title('People')
-        .schemaType('person')
-        .child(S.documentTypeList('person').title('People')),
+        .title('Tattoo Projects')
+        .schemaType('project')
+        .child(S.documentTypeList('project')),
       S.listItem()
-        .title('Categories')
-        .schemaType('category')
-        .child(S.documentTypeList('category').title('Categories')),
-      // This returns an array of all the document types
-      // defined in schema.js. We filter out those that we have
-      // defined the structure above
+        .title('News')
+        .schemaType('post')
+        .child(S.documentTypeList('post').title('News')),
+      S.listItem()
+        .title('Artists')
+        .schemaType('artist')
+        .child(S.documentTypeList('artist').title('Artists')),
+      S.listItem()
+        .title('Guest Artists')
+        .schemaType('guestArtist')
+        .child(S.documentTypeList('guestArtist').title('Guest Artists')),
+      S.listItem()
+        .title('Pages')
+        .child(
+          S.list()
+            .title('Pages')
+            .items([
+              S.listItem()
+                .title('About')
+                .child(
+                  S.editor()
+                    .id('aboutPage')
+                    .schemaType('page')
+                    .documentId('about')
+                )
+                .icon(FaFile),
+              S.listItem()
+                .title('Contact')
+                .child(
+                  S.editor()
+                    .id('contactPage')
+                    .schemaType('page')
+                    .documentId('contact')
+                )
+                .icon(FaFile),
+              S.listItem()
+                .title('FAQ')
+                .child(
+                  S.editor()
+                    .id('faqPage')
+                    .schemaType('page')
+                    .documentId('faq')
+                )
+                .icon(FaFile)
+            ])
+        ),
       ...S.documentTypeListItems().filter(hiddenDocTypes)
     ])

@@ -1,11 +1,14 @@
 import React from 'react'
-import {buildImageObj} from '../lib/helpers'
-import {imageUrlFor} from '../lib/image-url'
-import {ucfirst} from '../lib/string-utils'
+import { buildImageObj } from '../lib/helpers'
+import { imageUrlFor } from '../lib/image-url'
 
 import styles from './role-list.module.css'
 
-function RoleList ({items, title}) {
+function ucfirst (str) {
+  return `${str.substr(0, 1).toUpperCase()}${str.substr(1)}`
+}
+
+function RoleList ({ items, title }) {
   return (
     <div className={styles.root}>
       <h2 className={styles.headline}>{title}</h2>
@@ -28,7 +31,7 @@ function RoleList ({items, title}) {
             </div>
             <div>
               <div>
-                <strong>{(item.person && item.person.name) || <em>Missing name</em>}</strong>
+                <strong>{(item.person && item.person.name) || <em>Missing</em>}</strong>
               </div>
               {item.roles && (
                 <div>

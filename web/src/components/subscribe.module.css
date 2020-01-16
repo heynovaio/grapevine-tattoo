@@ -1,0 +1,72 @@
+@import '../styles/media-queries.css';
+@import '../styles/vars.css';
+@import './../styles/btn.css';
+
+.subscribe {
+		background-color: #714575;
+}
+.box{
+	text-align: center;
+	padding: 30px 0 75px 0;
+
+
+}
+.title{
+
+	@nest & .h2headline{
+		font-size: 36px;
+		color: #fff;
+		font-weight: 200;
+		@nest & ::after{
+			background-image: linear-gradient(to top, #714575 0%, rgba(113, 69, 117, 0.1));
+		}
+		@nest & .h2heading{
+			transform: translate(-50%, -50%);
+			left: 50%;
+		}
+	}
+}
+
+.text{
+	max-width: 60%;
+	margin: 0 auto;
+	line-height: 1.65;
+	padding-bottom: 40px;
+}
+
+.primary{
+	border-color: #192029;
+  background-color: #192029;
+  color: #ca9b46
+}
+
+.mailchimp {
+	position: relative;
+	@nest & label {
+		position: absolute;
+		margin: 4px 0 10px;
+		color: #181f29;
+		font-weight: bold;
+		height: 35px;
+		background: #fff;
+		width: 160px;
+		padding-top: 16px;
+		font-size: 18px;
+	}
+	@nest & input {
+		height: 30px;
+		outline: none;
+		border-radius: none;
+		-webkit-appearance: none;
+		border: solid 2px #dedede;
+  	background-color: rgba(54, 60, 68, 0.17);
+  	font-size: 18px;
+  	color: #fff;
+  	padding: 10px 5px 10px 170px;
+  	margin-right: 12px;
+  	width: 280px;
+	}
+	@nest & input:focus {
+		border: solid 2px #181f29;
+	}
+}

@@ -1,0 +1,25 @@
+@import '../styles/media-queries.css';
+@import '../styles/vars.css';
+@import './../styles/btn.css';
+
+.box{
+  text-align: center;
+}
+.title{
+
+  @nest & .h2headline{
+    font-size: 34px;
+
+    @nest & .h2heading{
+      transform: translate(-50%, -50%);
+      left: 50%;
+    }
+  }
+}
+
+.text{
+  max-width: 650px;
+  margin: 0 auto 40px;
+  line-height: 1.65;
+}
+

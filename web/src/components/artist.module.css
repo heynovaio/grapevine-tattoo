@@ -1,0 +1,168 @@
+@import '../styles/media-queries.css';
+@import '../styles/vars.css';
+@import './../styles/btn.css';
+
+.root {}
+
+.title {
+  composes: responsiveTitle1 from './typography.module.css';
+}
+
+.abovethefold{
+  background-color: #222932;
+  position: relative;
+  top: 0;
+  text-align: center;
+  align-items: center;
+  margin-top: -200px;
+  overflow: hidden;
+  height: calc(70vh);
+  min-height: 600px;
+
+  @nest & .mainImage {
+    height: 100%;
+    background: #1b2027;
+    width: auto;
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+
+    @nest & img {
+      display: block;
+      position: relative;
+
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
+    }
+  }
+  @nest & .text{
+    display:flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @nest & .headline{
+      font-size: 74px;
+    }
+    @nest & p{
+      font-style: italic;
+      padding: 20px 0 20px 0;
+      font-size: 18px;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+.aboutartist{
+  position: relative;
+  padding-top: 60px;
+
+  @nest & .imagebox{
+    position: relative;
+    width: 70%;
+    text-align: left;
+    margin-bottom: 40px;
+    @nest & img{
+      max-width: 100%;
+    }
+  }
+  @nest & .questions{
+    position: relative;
+    width: 90%;
+    padding: 10px 50px 0 0;
+    margin-bottom: 40px;
+    @nest & .itemPair{
+      width: 100%;
+      margin-bottom: 15px;
+      @nest & h3{
+        margin-bottom: 5px;
+        font-size: 24px;
+      }
+      @nest & p{
+        color:#dedede;
+        font-size: 18px;
+        line-height: 33px;
+      }
+    }
+
+  }
+  @nest & .follow{
+    position: relative;
+    width: 80%;
+    padding: 0;
+    justify-content: flex-end;
+    text-align: left;
+    line-height: 33px;
+    @nest & h3{
+      font-size: 36px;
+    }
+    @nest & a{
+      text-decoration: none;
+      margin: 2.5rem 0;
+      font-size: 20px;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+    }
+    @nest & p{
+      display: inline-block;
+      color:#dedede;
+    }
+    @nest & svg{
+      margin: 0 10px 0 0;
+      color: #dedede;
+      transform: translateY(20%);
+    }
+    @nest & button{
+      margin-top: 2.5rem;
+      position: relative;
+      display: block;
+    }
+  }
+  @media screen and (min-width: 900px){
+    display: flex;
+    justify-content: space-between;
+
+    @nest & .imagebox{
+      width: 30%;
+    }
+    @nest & .questions{
+      padding-left: 30px;
+      width: 45%;
+    }
+    @nest & .follow{
+      width: 35%;
+      text-align: right;
+      padding-left: 10px;
+      @nest & a{
+        flex-direction: row;
+      }
+      @nest & svg{
+        margin: 0 0 0 10px;
+      }
+      @nest & button{
+        float: right;
+      }
+    }
+  }
+}
+
+.videoLink {
+  display: none;
+}
+
+.title{
+  display: block;
+}
+.h2headline{
+  bottom: 0;
+  margin-top: 20px;
+}
+.h2headlineBg{
+  bottom: 0;
+  margin-top: 0;
+}

@@ -1,15 +1,10 @@
-const {isFuture} = require('date-fns')
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const { format } = require('date-fns')
 
-async function createProjectPages (graphql, actions, reporter) {
-  const {createPage} = actions
+async function createBlogPostPages (graphql, actions, reporter) {
+  const { createPage } = actions
   const result = await graphql(`
     {
-      allSanitySampleProject(filter: {slug: {current: {ne: null}}, publishedAt: {ne: null}}) {
+      allSanityPost(filter: { slug: { current: { ne: null } } }) {
         edges {
           node {
             id
@@ -25,25 +20,133 @@ async function createProjectPages (graphql, actions, reporter) {
 
   if (result.errors) throw result.errors
 
-  const projectEdges = (result.data.allSanitySampleProject || {}).edges || []
+  const postEdges = (result.data.allSanityPost || {}).edges || []
 
-  projectEdges
-    .filter(edge => !isFuture(edge.node.publishedAt))
-    .forEach(edge => {
-      const id = edge.node.id
-      const slug = edge.node.slug.current
-      const path = `/project/${slug}/`
+  postEdges.forEach((edge, index) => {
+    const { id, slug = {}, publishedAt } = edge.node
+    const dateSegment = format(publishedAt, 'YYYY/MM')
+    const path = `/blog/${dateSegment}/${slug.current}/`
 
-      reporter.info(`Creating project page: ${path}`)
+    reporter.info(`Creating blog post page: ${path}`)
 
-      createPage({
-        path,
-        component: require.resolve('./src/templates/project.js'),
-        context: {id}
-      })
+    createPage({
+      path,
+      component: require.resolve('./src/templates/blog-post.js'),
+      context: { id }
     })
+  })
 }
 
-exports.createPages = async ({graphql, actions, reporter}) => {
+async function createProjectPages (graphql, actions, reporter) {
+  const { createPage } = actions
+  const result = await graphql(`
+    {
+      allSanityProject(filter: { slug: { current: { ne: null } } }) {
+        edges {
+          node {
+            id
+            slug {
+              current
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  if (result.errors) throw result.errors
+
+  const projectEdges = (result.data.allSanityProject || {}).edges || []
+
+  projectEdges.forEach(edge => {
+    const id = edge.node.id
+    const slug = edge.node.slug.current
+    const path = `/project/${slug}/`
+
+    reporter.info(`Creating project page: ${path}`)
+
+    createPage({
+      path,
+      component: require.resolve('./src/templates/project.js'),
+      context: { id }
+    })
+  })
+}
+async function createArtistPages (graphql, actions, reporter) {
+  const { createPage } = actions
+  const result = await graphql(`
+    {
+      allSanityArtist(filter: { slug: { current: { ne: null } } }) {
+        edges {
+          node {
+            id
+            slug {
+              current
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  if (result.errors) throw result.errors
+
+  const artistEdges = (result.data.allSanityArtist || {}).edges || []
+
+  artistEdges.forEach(edge => {
+    const id = edge.node.id
+    const slug = edge.node.slug.current
+    const path = `/artist/${slug}/`
+
+    reporter.info(`Creating artist page: ${path}`)
+
+    createPage({
+      path,
+      component: require.resolve('./src/templates/artist.js'),
+      context: { id }
+    })
+  })
+}
+
+async function createGuestArtistPages (graphql, actions, reporter) {
+  const { createPage } = actions
+  const result = await graphql(`
+    {
+      allSanityGuestArtist(filter: { slug: { current: { ne: null } } }) {
+        edges {
+          node {
+            id
+            slug {
+              current
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  if (result.errors) throw result.errors
+
+  const guestArtistEdges = (result.data.allSanityGuestArtist || {}).edges || []
+
+  guestArtistEdges.forEach(edge => {
+    const id = edge.node.id
+    const slug = edge.node.slug.current
+    const path = `/guest-artist/${slug}/`
+
+    reporter.info(`Creating guest artist page: ${path}`)
+
+    createPage({
+      path,
+      component: require.resolve('./src/templates/guest-artist.js'),
+      context: { id }
+    })
+  })
+}
+
+exports.createPages = async ({ graphql, actions, reporter }) => {
+  await createBlogPostPages(graphql, actions, reporter)
+  await createArtistPages(graphql, actions, reporter)
+  await createGuestArtistPages(graphql, actions, reporter)
   await createProjectPages(graphql, actions, reporter)
 }

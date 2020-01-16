@@ -19,13 +19,13 @@ export default {
               sites: [
                 {
                   buildHookId: '5df9d42dfb22ac6a3d601807',
-                  title: 'Sanity Studio',
+                  title: 'Grapevine Studio',
                   name: 'grapevine-tattoo-studio',
                   apiId: 'cbc916e6-2dbf-48b9-b3f6-2b2cb7d8ee33'
                 },
                 {
                   buildHookId: '5df9d42d4787b756e024a9fe',
-                  title: 'Portfolio Website',
+                  title: 'Grapevine Website',
                   name: 'grapevine-tattoo',
                   apiId: '1d255ead-b65e-4000-9646-c8d841c623b4'
                 }

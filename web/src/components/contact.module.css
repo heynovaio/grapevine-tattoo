@@ -1,0 +1,98 @@
+@import '../styles/media-queries.css';
+@import '../styles/vars.css';
+@import './../styles/btn.css';
+
+.flex{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	@media screen and (max-width: 950px){
+		flex-direction: column;
+		margin-top: 40px;
+		@nest & .right{
+			width: 90%;
+		}
+		@nest & .left{
+			width: 90%;
+		}
+	}
+}
+
+.title{
+	padding-bottom: 80px;
+}
+
+.subtitle{
+	font-size: 36px;
+	font-weight: 200;
+	color: #ae8b50;
+}
+
+.text{
+	padding-bottom: 1rem;
+	line-height: 1.5;
+	font-weight: 100;
+}
+
+.left{
+	width: 40%;
+	@nest & .question{
+		padding-bottom: 5rem;
+	}
+	@nest & .messageform{
+		padding-bottom: 5rem;
+		@nest & input{
+			display: block;
+			margin-bottom: 40px;
+			background-color: #222932;
+			border: none;
+			width: 100%;
+			font-size: 20px;
+			color: #fff;
+			padding: .75rem;
+		}
+		@nest & form{
+		  font-size: 28px;
+		  font-weight: 500;
+		  color: #dedede;
+		  line-height: 1.65;
+		}
+		@nest & .message{
+			min-height: 5.5rem;
+			max-height: 25rem;
+			padding-top: 0;
+			background-color: #222932;
+			border: none;
+			width: 100%;
+			font-size: 20px;
+			color: #fff;
+			padding: .75rem;
+		}
+		@nest & .primary{
+			margin-top: 4rem;
+		}
+	}
+}
+
+.right{
+	width: 40%;
+	@nest & .contact{
+		padding-bottom: 4rem;
+	}
+
+	@nest & ul{
+		font-size: 20px;
+		@nest & li{
+			line-height: 3;
+			@nest & svg{
+				color: #dedede;
+				padding-right: 1rem;
+			}
+			@nest & a{
+				color: #dedede;
+				text-decoration: none;
+			}
+		}
+	}
+}
+

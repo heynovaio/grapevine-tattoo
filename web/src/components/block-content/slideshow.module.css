@@ -1,0 +1,69 @@
+@import '../../styles/media-queries.css';
+@import '../../styles/vars.css';
+
+.root {
+  color: var(--color-white);
+  margin: 2rem -1.5rem;
+  overflow: hidden;
+  padding: 1rem;
+
+  @media (--media-min-small) {
+    margin: 2rem -2rem;
+  }
+
+  @media (--media-min-medium) {
+    margin: 2rem 0;
+  }
+}
+
+.nav {
+  padding: 0.5rem 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  max-width: 380px;
+  margin: 30px auto 10px;
+  font-size: 20px;
+  @nest & span {
+    margin-top: 8px;
+  }
+  @nest & button {
+    background: none;
+    outline: none;
+    border: solid #ae8b50;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 16px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    @nest &:first-of-type {
+      transform: rotate(135deg);
+      -webkit-transform: rotate(135deg);
+    }
+  }
+  @nest & button[disabled]{
+    opacity: 0;
+  }
+}
+
+.carousel {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  transition: transform 250ms;
+}
+
+.slide {
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal;
+  box-sizing: border-box;
+  padding: 0 0.5rem;
+  max-height: 500px;
+  width: 100%;
+  text-align: center;
+  @nest & img {
+    width: auto;
+    max-height: 100%;
+  }
+}

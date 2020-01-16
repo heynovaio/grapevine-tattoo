@@ -1,8 +1,8 @@
-@import '../styles/custom-properties.css';
+@import '../styles/vars.css';
 
 .root {
   margin: 2rem 0 3rem;
-  border-top: 1px solid var(--color-very-light-gray);
+  border-top: 1px solid var(--color-black);
 }
 
 .headline {
@@ -25,7 +25,7 @@
 
   @nest & > div:last-child {
     flex: 1;
-    margin-left: 0.75rem;
+    margin-left: 1rem;
   }
 }
 

@@ -1,5 +1,5 @@
-@import '../styles/custom-media.css';
-@import '../styles/custom-properties.css';
+@import '../styles/media-queries.css';
+@import '../styles/vars.css';
 
 .root {}
 
@@ -51,11 +51,10 @@
 .publishedAt {
   composes: small from './typography.module.css';
   margin: 1.5rem 0 3rem;
-  color: var(--color-gray);
 }
 
 .categories {
-  border-top: 1px solid var(--color-very-light-gray);
+  border-top: 1px solid var(--color-black);
   margin: 2rem 0 3rem;
 
   @nest & ul {
@@ -75,7 +74,7 @@
 }
 
 .relatedProjects {
-  border-top: 1px solid var(--color-very-light-gray);
+  border-top: 1px solid var(--color-black);
   margin: 2rem 0 3rem;
 
   @nest & ul {

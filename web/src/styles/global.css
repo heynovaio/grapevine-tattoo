@@ -1,0 +1,9 @@
+.headline {
+  font-family: var(--font-primary);
+  font-size: 76px;
+  letter-spacing: -1px;
+  color: #ae8b50;
+  @nest .titleBg {
+
+  }
+}

@@ -1,10 +1,12 @@
-@import '../styles/custom-media.css';
+@import '../styles/media-queries.css';
 
 .root {
   box-sizing: border-box;
-  max-width: 960px;
+  max-width: 1240px;
   padding: 1.5em;
   margin: 0 auto;
+  z-index: 2;
+  position: relative;
 
   @media (--media-min-small) {
     padding: 2em;

@@ -1,0 +1,54 @@
+.socialContainer {
+  background: #222932;
+  @nest & .alice-carousel__stage-item {
+    margin-bottom: 0;
+    padding: 2px;
+    cursor: grab;
+  }
+  @nest & .alice-carousel {
+    background: #fff;
+    padding-top: 2px;
+    padding-left: 2px;
+  }
+  @nest & .h2headline {
+    text-align: center;
+  }
+  @nest & .h2heading {
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+}
+.social{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1rem 0 5rem 0;
+  @nest & li{
+    padding: 0 3rem;
+    text-align: center;
+    @nest & .socialLink{
+      text-decoration: none;
+      font-size: 70px;
+      color: #fff;
+    }
+    @nest & .socialLink:hover {
+      color: #1c2127;
+    }
+  }
+  @nest & span {
+    margin-top: 5px;
+    display: block;
+    font-size: 21px;
+    font-weight: 500;
+    text-align: center;
+    color: rgba(222, 222, 222, 0.61);
+  }
+}
+
+.title {
+  padding: 50px 0;
+}
+
+.item {
+  margin-right: 15px;
+}

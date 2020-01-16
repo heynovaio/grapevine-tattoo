@@ -1,0 +1,112 @@
+@import '../styles/media-queries.css';
+@import '../styles/vars.css';
+@import './../styles/btn.css';
+
+.footerWrapper{
+	background-color: #222932;
+	padding: 1rem 0 3rem 0;
+}
+.siteInfo{
+	font-size: 16px;
+  font-weight: 100;
+  line-height: 2.06;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.flex{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	@media screen and (max-width: 950px){
+		flex-direction: column;
+		justify-content: center;
+		@nest & .imagebox{
+			width:80%;
+		}
+		@nest & .content{
+			width: 80%;
+			padding-left: 0;
+		}
+	}
+}
+
+.imagebox{
+	position: relative;
+	width: 50%;
+	@nest & iframe{
+		height: 100%;
+		width: 100%;
+	}
+}
+
+.content{
+	position: relative;
+	width: 50%;
+	box-sizing: border-box;
+	padding: 5rem 2rem 4.5rem 2rem;
+	@nest & h2{
+		font-size: 42px;
+		letter-spacing: 5px;
+		color: #dedede;
+		height: fit-content;
+	}
+	@nest & p{
+		font-size: 20px;
+	}
+	@nest & .social{
+		display: flex;
+		flex-direction: row;
+		padding: 3rem 0 1rem 0;
+		@nest & li{
+			padding: 0 3rem 0 0;
+			@nest & .socialLink{
+				text-decoration: none;
+				font-size: 40px;
+			  color: #ca9b46;
+			}
+		}
+	}
+	@nest & .contact{
+		@nest & li{
+			font-size: 20px;
+			font-weight: 0;
+			padding: 1.5rem 0;
+			letter-spacing: 1px;
+			@nest & .emailLink{
+				color: #ca9b46;
+			}
+		}
+		@nest & span{
+			font-size: 22px;
+			font-weight: 500;
+			letter-spacing: .5px;
+			padding-right: .5rem;
+		}
+
+	}
+}
+
+.navbar{
+	display: inline;
+	@nest & ul{
+		color: #fff;
+		display: flex;
+		justify-content: center;
+		@nest & li{
+			display: inline;
+			padding: 2rem;
+			@nest & .navlink{
+				text-decoration: none;
+				font-size: 20px;
+			  font-weight: 500;
+			  line-height: 1.83;
+			  letter-spacing: 0.56px;
+			  color: #ced1d6;
+			  @nest &:hover {
+					color: #ca9b46;
+			  }
+			}
+		}
+	}
+}
