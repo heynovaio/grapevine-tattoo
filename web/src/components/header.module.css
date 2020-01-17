@@ -36,6 +36,9 @@
       color: #ae8b50;
     }
   }
+  @media (--media-max-small) {
+    display: none;
+  }
 }
 
 .branding {

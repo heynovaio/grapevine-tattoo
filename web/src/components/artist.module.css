@@ -44,7 +44,9 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
+    @media (--media-max-medium) {
+      padding-top: 170px;
+    }
     @nest & .headline{
       font-size: 74px;
     }

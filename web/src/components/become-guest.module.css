@@ -4,6 +4,9 @@
 
 .box{
   text-align: center;
+  @media (--media-max-medium) {
+    margin: 40px 0;
+  }
 }
 .title{
 
@@ -13,6 +16,10 @@
     @nest & .h2heading{
       transform: translate(-50%, -50%);
       left: 50%;
+      @media (--media-max-small) {
+        width: 100%;
+        font-size: 22px;
+      }
     }
   }
 }

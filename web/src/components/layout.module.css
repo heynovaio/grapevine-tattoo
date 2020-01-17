@@ -7,6 +7,9 @@
   @media (--media-min-small) {
     min-height: calc(100% - 90px - 169px);
   }
+  @media (--media-max-small) {
+    padding-top: 100px;
+  }
 }
 
 .footerWrapper {

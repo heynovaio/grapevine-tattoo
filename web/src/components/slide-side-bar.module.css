@@ -15,12 +15,9 @@
   position: absolute;
   right: 0;
   top: 0;
-  height: 100vh;
-  min-height: 600px;
   background-color: #1c2127;
   z-index: 4;
   min-width: 80px;
-  max-height: 900px;
 }
 
 .toggleNavButton {
@@ -35,6 +32,7 @@
   cursor: pointer;
   position: absolute;
   right: 0;
+  background-color: #1c2127;
 
   & span {
     border-bottom: solid 3px #ca9b46;
@@ -57,7 +55,7 @@
   display: none;
   padding-top: 100px;
   text-align: center;
-
+  height: 100vh;
   @nest & ul {
     margin: 0;
     padding: 0;

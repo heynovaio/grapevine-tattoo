@@ -6,6 +6,14 @@
   height: calc(70vh);
   min-height: 600px;
   background-image: radial-gradient(circle at 18% 45%, #192029, #363c44 82%);
+  overflow: hidden;
+  height: calc(100vh - 200px);
+  @media (--media-max-medium) {
+    height: calc(100vh - 107px);
+  }
+  @nest & .container {
+    display: inline-block;
+  }
 }
 
 .heading {
@@ -28,6 +36,10 @@
   max-width: 600px;
   margin-bottom: 20px;
   padding-top: 70px;
+  @media (--media-max-medium) {
+    font-size: 42px;
+    padding-top: 100px;
+  }
 
 }
 
@@ -39,4 +51,44 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  @nest & :global(.alice-carousel__dots) {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    top: 0;
+    background: #1b2027;
+    margin: 0;
+    width: 81px;
+    @media (--media-max-medium) {
+      bottom: 0;
+      top: auto;
+      left: 0;
+      height: auto;
+      width: 100vw;
+      display: none;
+    }
+  }
+  @nest & :global(.alice-carousel__dots-item){
+    box-shadow: 0 2px 12px 0 #0d1015;
+    border: solid 1px rgba(222, 222, 222, 0.37);
+    background-color: rgba(222, 222, 222, 0.3);
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    position: relative;
+    width: 14px;
+    height: 14px;
+    margin-bottom: 10px;
+    @media (--media-min-medium) {
+      display: block;
+    }
+  }
+  @nest & :global(.alice-carousel__dots-item:hover){
+    background-color: #ca9b46;
+  }
+  @nest & :global(.alice-carousel__dots-item.__active) {
+    background-color: #ca9b46;
+  }
 }
+
+

@@ -5,11 +5,17 @@
   margin-top: -200px;
   @nest & h1 {
     font-size: 50px;
+    @media (--media-max-medium) {
+      font-size: 24px;
+    }
   }
 }
 
 .title {
   composes: responsiveTitle1 from './typography.module.css';
+  @media (--media-max-medium) {
+    padding-top: 170px;
+  }
 }
 
 .blogContainer {
@@ -21,6 +27,7 @@
       padding: 0;
     }
   }
+
 }
 
 .mainImage {
@@ -29,6 +36,9 @@
   padding-bottom: calc(9 / 16 * 40%);
   /* max-height: 300px; */
   overflow: hidden;
+  @media (--media-max-small) {
+    padding-bottom: 270px;
+  }
   @nest &:after {
     content:'';
     position: absolute;
