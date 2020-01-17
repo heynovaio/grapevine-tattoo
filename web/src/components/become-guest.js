@@ -22,9 +22,9 @@ function BecomeGuest ({  }) {
         <p className={cn(paragraph, styles.text)}>
           There’s a reason the best guest artists come from all over the globe to do a creative residency at Grapevine: we will treat you like the star that you are. We are actively seeking applications for new guest artists!
         </p>
-        <button className={styles.primary} >
+        <a href="https://form.jotform.com/grapevinetattoo/new-artist-form" target="_blank" className={styles.primary} >
          Apply Here
-        </button>
+        </a>
       </div>
     </section>
   )

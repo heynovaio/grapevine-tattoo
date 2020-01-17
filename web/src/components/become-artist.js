@@ -22,9 +22,9 @@ function BecomeArtist ({  }) {
         <p className={cn(paragraph, styles.text)}>
          We are always actively seeking applications for more star artists to join us!
         </p>
-        <button className={styles.primary} >
+        <a href="https://form.jotform.com/grapevinetattoo/new-artist-form" target="_blank" className={styles.primary} >
          Apply Here
-        </button>
+        </a>
       </div>
     </section>
   )

@@ -48,12 +48,14 @@
 
 .mailchimp {
 	position: relative;
+	max-width: 620px;
+  margin: 0 auto;
 	@nest & label {
 		position: absolute;
-		margin: 4px 0 10px;
+		margin: 0px 0 10px;
 		color: #181f29;
 		font-weight: bold;
-		height: 35px;
+		height: 38px;
 		background: #fff;
 		width: 160px;
 		padding-top: 16px;
@@ -67,7 +69,6 @@
 		}
 	}
 	@nest & input {
-		height: 30px;
 		outline: none;
 		border-radius: none;
 		-webkit-appearance: none;
@@ -77,15 +78,12 @@
   	color: #fff;
   	padding: 10px 5px 10px 170px;
   	margin-right: 12px;
-  	@media (--media-min-medium) {
-			width: 280px;
-		}
+		box-sizing: border-box;
+		height: 54px;
+		width: 100%;
+		margin-bottom: 20px;
 		@media (--media-max-medium) {
-			width: 100%;
-			box-sizing: border-box;
-			height: 52px;
 			padding-left: 146px;
-			margin-bottom: 20px;
 		}
 	}
 	@nest & input:focus {
