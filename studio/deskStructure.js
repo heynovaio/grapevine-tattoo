@@ -28,10 +28,6 @@ S.list()
         )
         .icon(MdBusiness),
       S.listItem()
-        .title('Tattoo Projects')
-        .schemaType('project')
-        .child(S.documentTypeList('project')),
-      S.listItem()
         .title('News')
         .schemaType('post')
         .child(S.documentTypeList('post').title('News')),
