@@ -2,6 +2,10 @@ import React from 'react'
 import Container from '../container'
 
 import BgImg1 from "../../images/tattoo-showcase-1.jpg"
+import BgImg2 from "../../images/tattoo-showcase-2.jpg"
+import BgImg3 from "../../images/tattoo-showcase-3.jpg"
+import BgImg4 from "../../images/tattoo-showcase-4.jpg"
+
 import styles from './above-the-fold.module.css'
 
 import AliceCarousel from 'react-alice-carousel';
@@ -22,18 +26,21 @@ function AboveTheFold ({  }) {
           mouseDragEnabled
           mouseTrackingEnabled={true}
           buttonsDisabled={true}
-          autoPlay={false}
+          autoPlay={true}
           dotsDisabled={false}
-          autoPlayInterval={5000}>
+          autoPlayInterval={8000}>
 
-          <div role="presentation" onDragStart={handleOnDragStart} className={styles.item}>
-            <img alt="" role="presentation" src={BgImg1} />
-          </div>
            <div role="presentation" onDragStart={handleOnDragStart} className={styles.item}>
-            <img alt="" role="presentation" src={BgImg1} />
+            <img alt="" role="presentation" src={BgImg2} />
           </div>
           <div role="presentation" onDragStart={handleOnDragStart} className={styles.item}>
             <img alt="" role="presentation" src={BgImg1} />
+          </div>
+          <div role="presentation" onDragStart={handleOnDragStart} className={styles.item}>
+            <img alt="" role="presentation" src={BgImg3} />
+          </div>
+          <div role="presentation" onDragStart={handleOnDragStart} className={styles.item}>
+            <img alt="" role="presentation" src={BgImg4} />
           </div>
         </AliceCarousel>
       </div>
