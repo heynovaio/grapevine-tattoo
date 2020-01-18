@@ -34,6 +34,16 @@ module.exports = {
       options: {
         username: `grapevinetattoo`,
       },
-    }
+    },
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `grapevine-tattoo-theme`,
+        short_name: `grapevine`,
+        start_url: `/`,
+        icon: `src/images/grapevine-logo.png`, // This path is relative to the root of the site.
+      }
+    },
   ]
 }
