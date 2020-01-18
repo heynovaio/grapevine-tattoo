@@ -51,6 +51,15 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  @nest & :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
   @nest & :global(.alice-carousel__dots) {
     position: absolute;
     right: 0;
@@ -67,6 +76,9 @@
       width: 100vw;
       display: none;
     }
+  }
+  @nest & :global(.alice-carousel__stage-item){
+    height: 100vh;
   }
   @nest & :global(.alice-carousel__dots-item){
     box-shadow: 0 2px 12px 0 #0d1015;
