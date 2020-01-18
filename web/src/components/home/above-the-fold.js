@@ -28,7 +28,9 @@ function AboveTheFold ({  }) {
           buttonsDisabled={true}
           autoPlay={true}
           dotsDisabled={false}
-          autoPlayInterval={8000}>
+          fadeOutAnimation={true}
+          stopAutoPlayOnHover={false}
+          autoPlayInterval={6000}>
 
            <div role="presentation" onDragStart={handleOnDragStart} className={styles.item}>
             <img alt="" role="presentation" src={BgImg2} />
