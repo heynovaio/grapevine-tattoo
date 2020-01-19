@@ -5,6 +5,7 @@ import BgImg1 from "../../images/tattoo-showcase-1.jpg"
 import BgImg2 from "../../images/tattoo-showcase-2.jpg"
 import BgImg3 from "../../images/tattoo-showcase-3.jpg"
 import BgImg4 from "../../images/tattoo-showcase-4.jpg"
+import BgImg5 from "../../images/tattoo-showcase-5.jpg"
 
 import styles from './above-the-fold.module.css'
 
@@ -43,6 +44,9 @@ function AboveTheFold ({  }) {
           </div>
           <div role="presentation" onDragStart={handleOnDragStart} className={styles.item}>
             <img alt="" role="presentation" src={BgImg4} />
+          </div>
+          <div role="presentation" onDragStart={handleOnDragStart} className={styles.item}>
+            <img alt="" role="presentation" src={BgImg5} />
           </div>
         </AliceCarousel>
       </div>
