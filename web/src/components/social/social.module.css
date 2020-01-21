@@ -40,7 +40,7 @@
       color: #fff;
     }
     @nest & .socialLink:hover {
-      color: #1c2127;
+      color: #ae8b50;
     }
   }
   @nest & span {

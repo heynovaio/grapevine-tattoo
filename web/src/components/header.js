@@ -17,15 +17,15 @@ const Header = ({ onHideNav, onShowNav, showNav, siteTitle }) => (
         <img src={Logo2x} />
       </Link>
       <div className={styles.social}>
-        <Link to='/' className={styles.socialLink}>
+        <a href="https://www.instagram.com/grapevinetattoo/" target="_blank" className={styles.socialLink}>
           <FontAwesomeIcon icon={faInstagram} />
-        </Link>
-        <Link to='/' className={styles.socialLink}>
+        </a>
+        <a href="https://www.youtube.com/watch?v=7xCTAqcATx8" target="_blank" className={styles.socialLink}>
           <FontAwesomeIcon icon={faYoutubeSquare} />
-        </Link>
-        <Link to='/' className={styles.socialLink}>
+        </a>
+        <a href="https://www.facebook.com/grapevinetattoo/" target="_blank" className={styles.socialLink}>
           <FontAwesomeIcon icon={faFacebookSquare} />
-        </Link>
+        </a>
       </div>
     </div>
   </div>
