@@ -27,6 +27,7 @@ function Slideshow (props) {
             {slide.asset && (
               <img
                 src={imageUrlFor(buildImageObj(slide))
+                  .width(600)
                   .url()}
               />
             )}

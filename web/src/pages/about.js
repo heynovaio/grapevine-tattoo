@@ -16,57 +16,22 @@ import { headline, headlineBg, heading, headline2 } from '../components/typograp
 
 export const query = graphql`
   query AboutPageQuery {
-    page: sanityPage(_id: { regex: "/(drafts.|)about/" }) {
+    about: sanityAbout(_id: { regex: "/(drafts.|)about/" }) {
       id
       title
       _rawBody
-    }
-    people: allSanityPerson {
-      edges {
-        node {
-          id
-          image {
-            asset {
-              _id
-            }
-          }
-          name
-          _rawBio
-        }
-      }
-    }
-    posts: allSanityPost {
-      edges {
-        node {
-          id
-          publishedAt
-          mainImage {
-            crop {
-              _key
-              _type
-              top
-              bottom
-              left
-              right
-            }
-            hotspot {
-              _key
-              _type
-              x
-              y
-              height
-              width
-            }
-            asset {
-              _id
-            }
-            alt
-          }
-          title
-          _rawExcerpt
-          _rawBody
-          slug {
-            current
+      years{
+        _key
+        _type
+        milestones{
+          _key
+          _type
+          value
+          milestone {
+            _key
+            _type
+            date
+            title
           }
         }
       }
@@ -85,25 +50,19 @@ const AboutPage = props => {
     )
   }
 
-  const page = data && data.page
+  const aboutNodes = data && data.about
 
-  if (!page) {
-    throw new Error(
-      'Missing "About" page data. Open the studio at http://localhost:3333 and add "About" page data and restart the development server.'
-    )
-  }
 
   return (
     <Layout>
-      <SEO title={page.title} />
       <Container>
         <h1 className={headline}>
-          <span role="presentation" className={headlineBg}>{page.title}</span>
+          <span role="presentation" className={headlineBg}>{aboutNodes.title}</span>
           <span className={heading}>Our Story</span>
         </h1>
-        <BlockContent blocks={page._rawBody || []} />
-        <Timeline/>
+        <BlockContent blocks={aboutNodes._rawBody || []} />
 
+        <Timeline {...aboutNodes} />
       </Container>
       <Subscribe/>
     </Layout>

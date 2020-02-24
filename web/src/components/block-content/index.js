@@ -25,8 +25,7 @@ const serializers = {
     },
     figure (props) {
       return <Figure {...props.node} />
-    },
-
+    }
   }
 }
 

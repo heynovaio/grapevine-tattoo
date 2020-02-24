@@ -44,8 +44,8 @@ function Footer ({  }) {
             <ul className={styles.contact}>
             	<li><span>PHONE: </span>1-250-542-6293</li>
             	<li><span>E-MAIL: </span>
-            		<Link className={styles.emailLink} to='/'>
-            			info@grapevine.com</Link>
+            		<a className={styles.emailLink} href="mailto:info@grapevine.com">
+            			info@grapevine.com</a>
             		</li>
             	<li><span>HOURS: </span>Tuesday - Saturday, 11:00am - 8:00 pm</li>
             </ul>

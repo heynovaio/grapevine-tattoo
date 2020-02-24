@@ -3,7 +3,7 @@ import { MdBusiness, MdSettings } from 'react-icons/md'
 import { FaFile } from 'react-icons/fa'
 
 const hiddenDocTypes = listItem =>
-  !['category', 'companyInfo', 'page', 'person', 'artist', 'guestArtist','post', 'project', 'siteSettings'].includes(listItem.getId())
+  !['category', 'companyInfo', 'page', 'person', 'artist', 'about', 'guestArtist','post', 'project', 'siteSettings'].includes(listItem.getId())
 
 export default () =>
 S.list()
@@ -49,9 +49,9 @@ S.list()
                 .title('About')
                 .child(
                   S.editor()
-                    .id('aboutPage')
-                    .schemaType('page')
-                    .documentId('about')
+                    .id('about2Page')
+                    .schemaType('about')
+                    .documentId('about2')
                 )
                 .icon(FaFile),
               S.listItem()

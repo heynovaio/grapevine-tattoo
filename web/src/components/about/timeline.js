@@ -3,9 +3,24 @@ import Container from '../container'
 import styles from './timeline.module.css'
 import stockTattoo from '../../images/stocktattoo.jpg'
 
-function Timeline({  }) {
+import { Link } from 'gatsby'
+import { cn, buildImageObj } from '../../lib/helpers'
+import { imageUrlFor } from '../../lib/image-url'
+
+function Timeline(props) {
+  const { years, milestones, milestone} = props
+
   return (
     <section className={styles.timeline}>
+{milestones && (
+			<ul>
+	      {milestones.map( milestone => (
+	        <li key={milestone._id}>{milestone.title}</li>
+	      ))}
+	    </ul>
+
+	     )}
+
 
       <Container>
 	    	<h3 className={styles.headlineBg}>2019</h3>

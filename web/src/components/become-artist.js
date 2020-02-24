@@ -23,7 +23,7 @@ function BecomeArtist ({  }) {
          We are always actively seeking applications for more star artists to join us!
         </p>
         <a href="https://form.jotform.com/grapevinetattoo/new-artist-form" target="_blank" className={styles.primary} >
-         Apply Here
+          Apply Here
         </a>
       </div>
     </section>

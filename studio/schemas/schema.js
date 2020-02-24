@@ -11,7 +11,10 @@ import category from './category'
 import companyInfo from './companyInfo'
 import figure from './figure'
 import mainImage from './mainImage'
+import milestones from './milestones'
+import milestone from './milestone'
 import page from './page'
+import about from './about'
 import person from './person'
 import artist from './artist'
 import guestArtist from './guestArtist'
@@ -21,6 +24,7 @@ import project from './project'
 import projectMember from './projectMember'
 import siteSettings from './siteSettings'
 import slideshow from './slideshow'
+import years from './years'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -40,13 +44,17 @@ export default createSchema({
     page,
     person,
     artist,
+    milestones,
+    milestone,
     guestArtist,
     post,
     postAuthor,
     project,
     projectMember,
     siteSettings,
-    slideshow
+    slideshow,
+    about,
+    years
 
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
