@@ -36,25 +36,30 @@
   padding-bottom: calc(9 / 16 * 40%);
   /* max-height: 300px; */
   overflow: hidden;
+  margin-bottom: -2px;
   @media (--media-max-small) {
     padding-bottom: 270px;
   }
   @nest &:after {
-    content:'';
+    content: '';
     position: absolute;
+    right: 0;
+    bottom: 0;
+    background: #1b2027;
     width: 100%;
     height: 100%;
-    background: rgba(27,32,39,0.45);
+    opacity: .75;
   }
   @nest & img {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 101%;
+    height: 101%;
     vertical-align: top;
     object-fit: cover;
-    filter: blur(2px) saturate(0);
+    filter: blur(2px) saturate(0) contrast(1);
+    margin-bottom: -2px;
   }
 }
 
