@@ -34,16 +34,18 @@
 .paragraph{
 	composes: paragraph from './../typography.module.css';
 }
-
-
+.desc {
+  margin-bottom: 120px;
+  max-width: 700px;
+  margin-top: 20px;
+}
 
 .timeline{
 	box-sizing: border-box;
 	position: relative;
-	padding: 1rem;
+	padding: 0 1rem;
 	max-width: 1440px;
-	margin: 80px auto;
-
+	margin: 60px auto 80px;
 	&:before{
 		content: '';
 		position: absolute;
@@ -85,20 +87,19 @@
 	text-align: right;
 	width: 100%;
 	padding-bottom: 1rem;
-	min-height: 500px;
+	min-height: 360px;
 
 	@nest & .text{
 		box-sizing: border-box;
 		padding: 1rem 10% 1rem .5rem;
 		width: 50%;
 		@nest & .date{
-			padding-bottom: 2rem;
-		}
-		@nest & .milestone{
-			padding-bottom: 2rem;
+      font-size: 30px;
+      font-weight: bold;
+			padding-bottom: 1rem;
 		}
 		@nest & .content{
-			padding-bottom: 2rem;
+			padding-bottom: 1rem;
 		}
 	}
 

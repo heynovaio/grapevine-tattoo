@@ -12,7 +12,7 @@ import Subscribe from '../components/subscribe'
 
 import { mapEdgesToNodes, filterOutDocsWithoutSlugs } from '../lib/helpers'
 
-import { headline, headlineBg, heading, headline2 } from '../components/typography.module.css'
+import { headline, headlineBg, paragraph, heading, headline2 } from '../components/typography.module.css'
 
 export const query = graphql`
   query AboutPageQuery {
@@ -66,8 +66,6 @@ const AboutPage = props => {
           <span role="presentation" className={headlineBg}>{about.title}</span>
           <span className={heading}>Our Story</span>
         </h1>
-        <BlockContent blocks={about._rawBody || []} />
-
         <Timeline {...about} />
       </Container>
       <Subscribe/>
