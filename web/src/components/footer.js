@@ -12,7 +12,7 @@ function Footer ({  }) {
 		<footer className={styles.footer}>
 			<div className={styles.flex}>
 				<div className={styles.imagebox}>
-					<iframe src="https://snazzymaps.com/embed/198926"></iframe>
+					<iframe title="google map" src="https://snazzymaps.com/embed/198926"></iframe>
 				</div>
 				<div className={styles.content}>
 					<h2 className={cn(large, styles.h2large)}>
@@ -25,19 +25,19 @@ function Footer ({  }) {
 						<ul className={styles.social}>
               <li>
                 <a href='https://www.youtube.com/watch?v=7xCTAqcATx8' target="_blank" className={styles.socialLink}>
-                  <FontAwesomeIcon icon={faYoutubeSquare} />
+                  <FontAwesomeIcon title="youtube link" icon={faYoutubeSquare} />
                 </a>
               </li>
 
               <li>
                 <a href='https://www.instagram.com/grapevinetattoo/' target="_blank" className={styles.socialLink}>
-                  <FontAwesomeIcon icon={faInstagram} />
+                  <FontAwesomeIcon title="instagram link" icon={faInstagram} />
                 </a>
               </li>
 
               <li>
                 <a href='https://www.facebook.com/grapevinetattoo/' target="_blank" className={styles.socialLink}>
-                  <FontAwesomeIcon icon={faFacebookSquare} />
+                  <FontAwesomeIcon title="facebook link" icon={faFacebookSquare} />
                 </a>
               </li>
             </ul>

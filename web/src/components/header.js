@@ -14,17 +14,17 @@ const Header = ({ onHideNav, onShowNav, showNav, siteTitle }) => (
     <div className={styles.wrapper}>
 
       <Link className={styles.logo} to='/'>
-        <img src={Logo2x} />
+        <img src={Logo2x} title="Grapevine Tattoo" alt="Grapevine Tattoo" />
       </Link>
       <div className={styles.social}>
         <a href="https://www.instagram.com/grapevinetattoo/" target="_blank" className={styles.socialLink}>
-          <FontAwesomeIcon icon={faInstagram} />
+          <FontAwesomeIcon title="instagram link" icon={faInstagram} />
         </a>
         <a href="https://www.youtube.com/watch?v=7xCTAqcATx8" target="_blank" className={styles.socialLink}>
-          <FontAwesomeIcon icon={faYoutubeSquare} />
+          <FontAwesomeIcon title="youtube link" icon={faYoutubeSquare} />
         </a>
         <a href="https://www.facebook.com/grapevinetattoo/" target="_blank" className={styles.socialLink}>
-          <FontAwesomeIcon icon={faFacebookSquare} />
+          <FontAwesomeIcon title="facebook link" icon={faFacebookSquare} />
         </a>
       </div>
     </div>

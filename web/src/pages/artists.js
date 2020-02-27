@@ -27,6 +27,7 @@ export const query = graphql`
           mainImage {
             asset {
               _id
+
             }
             alt
           }

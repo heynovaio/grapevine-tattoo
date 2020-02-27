@@ -13,6 +13,8 @@ function ArtistPreview (props) {
       <div className={styles.leadMediaThumb}>
         {props.image && props.image.asset && (
           <img
+            alt=""
+            role="presentation"
             src={imageUrlFor(buildImageObj(props.image))
               .width(278)
               .height(352)

@@ -80,6 +80,9 @@
   @nest & :global(.alice-carousel__stage-item){
     height: 100vh;
   }
+  @nest & :global(.alice-carousel__stage-item *){
+    height: 100vh;
+  }
   @nest & :global(.alice-carousel__dots-item){
     box-shadow: 0 2px 12px 0 #0d1015;
     border: solid 1px rgba(222, 222, 222, 0.37);

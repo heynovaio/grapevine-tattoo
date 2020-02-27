@@ -1,4 +1,6 @@
 import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from "gatsby-image"
 import Container from '../container'
 
 import BgImg1 from "../../images/tattoo-showcase-1.jpg"
@@ -14,7 +16,34 @@ import "react-alice-carousel/lib/alice-carousel.css";
 
 const handleOnDragStart = e => e.preventDefault()
 
-function AboveTheFold ({  }) {
+function AboveTheFold () {
+
+  const data = useStaticQuery(graphql`
+    query {
+      img1: file(relativePath: { eq: "tattoo-showcase-3.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2000, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      },
+      img2: file(relativePath: { eq: "tattoo-showcase-4.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2000, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      },
+      img3: file(relativePath: { eq: "tattoo-showcase-5.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2000, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <section className={styles.aboveTheFold}>
       <Container>
@@ -32,12 +61,14 @@ function AboveTheFold ({  }) {
           fadeOutAnimation={true}
           stopAutoPlayOnHover={false}
           autoPlayInterval={6000}>
-
           <div role="presentation" onDragStart={handleOnDragStart} className={styles.item}>
-            <img alt="" role="presentation" src={BgImg4} />
+            <Img alt="" role="presentation" fluid={data.img1.childImageSharp.fluid} />
           </div>
           <div role="presentation" onDragStart={handleOnDragStart} className={styles.item}>
-            <img alt="" role="presentation" src={BgImg5} />
+            <Img alt="" role="presentation" fluid={data.img2.childImageSharp.fluid} />
+          </div>
+          <div role="presentation" onDragStart={handleOnDragStart} className={styles.item}>
+            <Img alt="" role="presentation" fluid={data.img3.childImageSharp.fluid} />
           </div>
         </AliceCarousel>
       </div>
