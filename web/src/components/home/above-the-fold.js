@@ -8,6 +8,7 @@ import BgImg2 from "../../images/tattoo-showcase-2.jpg"
 import BgImg3 from "../../images/tattoo-showcase-3.jpg"
 import BgImg4 from "../../images/tattoo-showcase-4.jpg"
 import BgImg5 from "../../images/tattoo-showcase-5.jpg"
+import BgImg6 from "../../images/tattoo-showcase-6.jpg"
 
 import styles from './above-the-fold.module.css'
 
@@ -20,7 +21,7 @@ function AboveTheFold () {
 
   const data = useStaticQuery(graphql`
     query {
-      img1: file(relativePath: { eq: "tattoo-showcase-3.jpg" }) {
+      img1: file(relativePath: { eq: "tattoo-showcase-3b.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2000, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
@@ -35,6 +36,27 @@ function AboveTheFold () {
         }
       },
       img3: file(relativePath: { eq: "tattoo-showcase-5.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2000, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      },
+      img4: file(relativePath: { eq: "tattoo-showcase-6d.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2000, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      },
+      img5: file(relativePath: { eq: "tattoo-showcase-7b.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2000, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      },
+      img6: file(relativePath: { eq: "tattoo-showcase-8.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2000, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
@@ -65,7 +87,16 @@ function AboveTheFold () {
             <Img alt="" role="presentation" fluid={data.img1.childImageSharp.fluid} />
           </div>
           <div role="presentation" onDragStart={handleOnDragStart} className={styles.item}>
+            <Img alt="" role="presentation" fluid={data.img4.childImageSharp.fluid} />
+          </div>
+          <div role="presentation" onDragStart={handleOnDragStart} className={styles.item}>
+            <Img alt="" role="presentation" fluid={data.img5.childImageSharp.fluid} />
+          </div>
+          <div role="presentation" onDragStart={handleOnDragStart} className={styles.item}>
             <Img alt="" role="presentation" fluid={data.img2.childImageSharp.fluid} />
+          </div>
+          <div role="presentation" onDragStart={handleOnDragStart} className={styles.item}>
+            <Img alt="" role="presentation" fluid={data.img6.childImageSharp.fluid} />
           </div>
           <div role="presentation" onDragStart={handleOnDragStart} className={styles.item}>
             <Img alt="" role="presentation" fluid={data.img3.childImageSharp.fluid} />
