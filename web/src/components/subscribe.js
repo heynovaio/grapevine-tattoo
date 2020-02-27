@@ -3,6 +3,8 @@ import { Link } from 'gatsby'
 import { cn, buildImageObj } from '../lib/helpers'
 import BlockContent from './block-content'
 import Container from './container'
+import Mailchimp from 'react-mailchimp-form'
+
 
 import { headline, heading, headlineBg, paragraph } from '../components/typography.module.css'
 import styles from './subscribe.module.css'
@@ -24,9 +26,28 @@ function Subscribe ({  }) {
 	        	Become a part of the Grapevine community, and never miss a guest artists announcement, convention appearance or gallery showing.
 	        </p>
           <form className={styles.mailchimp}>
-            <label>Email Address:</label>
-            <input type="text" placeholder="" />
-            <button className={styles.primary}>Subscribe</button>
+            <label to="EMAIL">Email Address:</label>
+            <Mailchimp
+              action='https://grapevinetattoo.us4.list-manage.com/subscribe/post?u=af4b47905d3a9071566b719cf&amp;id=c93a240ec4'
+              fields={[
+                {
+                  name: 'EMAIL',
+                  type: 'email',
+                  required: true
+                }
+              ]}
+               // Change predetermined language
+              messages = {
+                {
+                  sending: "Sending...",
+                  success: "Thank you for subscribing!",
+                  error: "An unexpected internal error has occurred.",
+                  empty: "You must write an e-mail address.",
+                  duplicate: "Too many subscribe attempts for this email address",
+                  button: "Subscribe"
+                }
+              }
+            />
           </form>
         </div>
       </Container>

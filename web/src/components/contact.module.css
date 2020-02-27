@@ -50,6 +50,10 @@
 			font-size: 20px;
 			color: #fff;
 			padding: .75rem;
+			border: 2px solid #222932;
+			@nest &:focus {
+				border: 2px solid #714575;
+			}
 		}
 		@nest & form{
 		  font-size: 28px;
@@ -67,9 +71,24 @@
 			font-size: 20px;
 			color: #fff;
 			padding: .75rem;
+			border: 2px solid transparent;
+
+			@nest &:focus {
+				border: 2px solid #714575;
+			}
 		}
 		@nest & .primary{
+			border: none;
 			margin-top: 4rem;
+			background:#714575;
+			color: #fff;
+			padding: 12px 40px 16px;
+			display: block;
+			width: auto;
+			border: 2px solid transparent;
+			@nest &:focus {
+				border: 2px solid #ae8b50;
+			}
 		}
 	}
 }

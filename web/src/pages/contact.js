@@ -65,9 +65,9 @@ const ContactPage = props => {
               <p className={cn(paragraph, styles.text)}>
                 We might already have the answer!
               </p>
-              <button className={styles.primary} href={faqlink}>
+              <Link className={styles.primary} to='/faq'>
                 Check Our FAQ
-              </button>
+              </Link>
             </div>
             <div className={styles.messageform}>
               <h2 className={cn(headline2, styles.subtitle)}>
@@ -76,16 +76,14 @@ const ContactPage = props => {
               <p className={cn(paragraph, styles.text)}>
                 We’d love to hear from you! Drop us a line and we’ll get back to you as soon as we can. If there’s a specific artist you’d like to hear from, be sure to let us know!
               </p>
-              <form>
-                Name
-                <input type="text" className={styles.name}/>
-                Email
-                <input type="text" className={styles.email} maxlength="50"/>
-                Message
-                <textarea className={styles.message} maxlength="1000"/>
-                <button className={styles.primary} href='/faq/'>
-                  Send Message
-                </button>
+              <form action="https://formspree.io/kirsten@heynova.io" method="POST">
+                <label to="name">Name</label>
+                <input id="name" name="name" type="text" className={styles.name}/>
+                <label to="email">Email</label>
+                <input type="text" id="email" name="_replyto" className={styles.email} maxlength="50"/>
+                <label to="message">Message</label>
+                <textarea name="message" id="message" className={styles.message} maxlength="1000"/>
+                <input type="submit" value="Send Message" className={styles.primary} />
               </form>
             </div>
           </div>
@@ -104,11 +102,11 @@ const ContactPage = props => {
                 </li>
                 <li>
                   <FontAwesomeIcon icon={faPhone} />
-                  1-250-542-6293
+                  <a href="tel:1-250-542-6293">1-250-542-6293</a>
                 </li>
                 <li>
                   <FontAwesomeIcon icon={faEnvelope} />
-                  info@grapevine.com
+                  <a href="mailto:info@grapevine.com?subject=Contact%20Form%20Message">info@grapevine.com</a>
                 </li>
               </ul>
 
@@ -119,24 +117,16 @@ const ContactPage = props => {
               </h2>
               <ul>
                 <li>
-                  <Link to='/' className={styles.socialLink}>
-                    <FontAwesomeIcon icon={faYoutubeSquare} />
-                    Youtube Handle
-                  </Link>
-                </li>
-
-                <li>
-                  <Link to='/' className={styles.socialLink}>
+                  <a href='https://www.instagram.com/grapevinetattoo/' target="_blank" className={styles.socialLink}>
                     <FontAwesomeIcon icon={faInstagram} />
-                    IG Handle
-                  </Link>
+                    @grapevinetattoo
+                  </a>
                 </li>
-
                 <li>
-                  <Link to='/' className={styles.socialLink}>
+                  <a href='https://www.facebook.com/grapevinetattoo/' target="_blank" className={styles.socialLink}>
                     <FontAwesomeIcon icon={faFacebookSquare} />
-                    FB Handle
-                  </Link>
+                    /grapevinetattoo
+                  </a>
                 </li>
               </ul>
             </div>

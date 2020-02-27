@@ -63,10 +63,16 @@
   max-width: 800px;
   padding-bottom: 50px;
   @nest & p {
-
+    font-size: 20px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    @nest & strong {
+      color: var(--color-accent);
+    }
   }
   @nest & a {
     color: var(--color-accent);
+    text-decoration: underline;
 
     @media (hover: hover) {
       @nest &:hover {
@@ -82,9 +88,24 @@
   }
   @nest & h2 {
     margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-family: var(--font-secondary);
+    color: var(--color-accent);
   }
   @nest & h3 {
     margin-top: 15px;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: var(--font-secondary);
+  }
+  @nest & h4 {
+    margin-top: 15px;
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-family: var(--font-secondary);
+    color: var(--color-accent);
+    font-weight: bold;
   }
   @nest & ul {
     list-style: disc;
@@ -113,11 +134,11 @@
     display: block;
   }
   @nest & blockquote {
-    font-size: 30px;
+    font-size: 25px;
     line-height: 1.35;
-    border-left: 4px solid;
+    border-left: 4px solid var(--color-accent);
     padding-left: 17px;
-    margin: 15px 22px;
+    margin: 55px 22px;
     display: block;
   }
 }

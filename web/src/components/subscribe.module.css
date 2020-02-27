@@ -40,12 +40,6 @@
   }
 }
 
-.primary{
-	border-color: #192029;
-  background-color: #192029;
-  color: #ca9b46
-}
-
 .mailchimp {
 	position: relative;
 	max-width: 620px;
@@ -85,6 +79,32 @@
 		@media (--media-max-medium) {
 			padding-left: 146px;
 		}
+	}
+	@nest & button{
+		border-color: #192029;
+	  background-color: #192029;
+	  color: #ca9b46;
+	  border-radius: 40px;
+    font-family: itc-avant-garde-gothic-pro,sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-align: center;
+    padding: 15px 42px 17px;
+    border: none;
+    display: inline-block;
+    text-decoration: none;
+    @nest &:hover {
+    	background: #fff;
+    	color: #714575;
+    }
+	}
+	@nest & p {
+		color:#fff!important;
+		font-weight: bold;
+		font-size: 26px;
+		margin-top: 20px;
+		margin-bottom: -20px;
 	}
 	@nest & input:focus {
 		border: solid 2px #181f29;

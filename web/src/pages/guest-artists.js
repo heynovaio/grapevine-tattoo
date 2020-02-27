@@ -13,7 +13,7 @@ import { headline, headlineBg, heading, headline2 } from '../components/typograp
 
 export const query = graphql`
   query GuestArtistsPageQuery {
-    guestArtists: allSanityGuestArtist(limit: 12, sort: { fields: [appearanceDate], order: DESC }) {
+    guestArtists: allSanityGuestArtist(sort: { fields: [appearanceDate], order: DESC }) {
       edges {
         node {
           id

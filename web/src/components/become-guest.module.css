@@ -4,8 +4,9 @@
 
 .box{
   text-align: center;
+  margin: 50px 0 100px;
   @media (--media-max-medium) {
-    margin: 40px 0;
+    margin: 40px 0 40px;
   }
 }
 .title{

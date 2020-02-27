@@ -153,8 +153,9 @@ html {
  * Address `outline` inconsistency between Chrome and other browsers.
  */
 
+button:focus,
 a:focus {
-    outline: thin dotted;
+    outline: solid #714575;
 }
 
 /**

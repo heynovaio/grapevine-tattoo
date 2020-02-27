@@ -42,6 +42,9 @@ function Artist (props) {
               {props.bookinglink && (
                 <a href={props.bookinglink} target="_blank" className={styles.primary}>Book Now</a>
               )}
+              {!props.bookinglink && (
+                <a href={cnUrl('mailto:info@grapevinetattoo.com?subject=Book%20With%20',props.title)} className={styles.primary}>Book Now</a>
+              )}
               {props.videolink && (
                 <button className={styles.videoLink} href={videolink}>Play Video</button>
               )}

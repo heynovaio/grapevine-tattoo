@@ -49,7 +49,7 @@
   @nest & .text{
     display:flex;
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     @media (--media-max-medium) {
@@ -57,13 +57,15 @@
     }
     @nest & .headline{
       font-size: 74px;
+      margin-bottom: 20px;
     }
     @nest & p{
       font-style: italic;
-      padding: 20px 0 20px 0;
+      padding: 0px 0 20px 0;
       font-size: 18px;
       letter-spacing: 1px;
     }
+
   }
 }
 
