@@ -21,7 +21,7 @@ function AboveTheFold () {
 
   const data = useStaticQuery(graphql`
     query {
-      img1: file(relativePath: { eq: "tattoo-showcase-3b.jpg" }) {
+      img1: file(relativePath: { eq: "tattoo-showcase-11.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2000, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
@@ -42,14 +42,14 @@ function AboveTheFold () {
           }
         }
       },
-      img4: file(relativePath: { eq: "tattoo-showcase-6d.jpg" }) {
+      img4: file(relativePath: { eq: "tattoo-showcase-9.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2000, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       },
-      img5: file(relativePath: { eq: "tattoo-showcase-7b.jpg" }) {
+      img5: file(relativePath: { eq: "tattoo-showcase-10.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2000, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
