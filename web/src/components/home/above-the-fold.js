@@ -3,13 +3,6 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Img from "gatsby-image"
 import Container from '../container'
 
-import BgImg1 from "../../images/tattoo-showcase-1.jpg"
-import BgImg2 from "../../images/tattoo-showcase-2.jpg"
-import BgImg3 from "../../images/tattoo-showcase-3.jpg"
-import BgImg4 from "../../images/tattoo-showcase-4.jpg"
-import BgImg5 from "../../images/tattoo-showcase-5.jpg"
-import BgImg6 from "../../images/tattoo-showcase-6.jpg"
-
 import styles from './above-the-fold.module.css'
 
 import AliceCarousel from 'react-alice-carousel';

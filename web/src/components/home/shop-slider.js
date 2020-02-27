@@ -5,15 +5,6 @@ import { cn, buildImageObj } from '../../lib/helpers'
 import BlockContent from './../block-content'
 import Container from './../container'
 
-import BgImg1 from "../../images/shop-1.jpg"
-import BgImg2 from "../../images/shop-2.jpg"
-import BgImg3 from "../../images/shop-3.jpg"
-import BgImg4 from "../../images/shop-4.jpg"
-import BgImg5 from "../../images/shop-5.jpg"
-import BgImg6 from "../../images/shop-6.jpg"
-import BgImg7 from "../../images/shop-7.png"
-import BgImg8 from "../../images/shop-8.png"
-
 import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
 
