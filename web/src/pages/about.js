@@ -32,6 +32,12 @@ export const query = graphql`
             _type
             date
             title
+            desc
+            image {
+              asset {
+                _id
+              }
+            }
           }
         }
       }
@@ -50,19 +56,19 @@ const AboutPage = props => {
     )
   }
 
-  const aboutNodes = data && data.about
+  const about = data && data.about
 
 
   return (
     <Layout>
       <Container>
         <h1 className={headline}>
-          <span role="presentation" className={headlineBg}>{aboutNodes.title}</span>
+          <span role="presentation" className={headlineBg}>{about.title}</span>
           <span className={heading}>Our Story</span>
         </h1>
-        <BlockContent blocks={aboutNodes._rawBody || []} />
+        <BlockContent blocks={about._rawBody || []} />
 
-        <Timeline {...aboutNodes} />
+        <Timeline {...about} />
       </Container>
       <Subscribe/>
     </Layout>

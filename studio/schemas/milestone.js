@@ -16,8 +16,12 @@ export default {
     {
       title: 'Description',
       name: 'desc',
-      type: 'blockText'
+      type: 'string'
     },
+    {
+      name: 'image',
+      type: 'image'
+    }
   ]
 }
 

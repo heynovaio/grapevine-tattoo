@@ -59,7 +59,7 @@ export const query = graphql`
       }
     }
 
-    artists: allSanityArtist(limit: 6, sort: { fields: [publishedAt], order: DESC }) {
+    artists: allSanityArtist( sort: { fields: [publishedAt], order: ASC }) {
       edges {
         node {
           id
@@ -78,7 +78,7 @@ export const query = graphql`
       }
     }
 
-    guestArtists: allSanityGuestArtist(limit: 6, sort: { fields: [appearanceDate], order: DESC }) {
+    guestArtists: allSanityGuestArtist( sort: { fields: [appearanceDate], order: DESC }) {
       edges {
         node {
           id
@@ -97,7 +97,7 @@ export const query = graphql`
       }
     }
 
-    posts: allSanityPost(limit: 6, sort: { fields: [publishedAt], order: DESC }) {
+    posts: allSanityPost(limit: 2, sort: { fields: [publishedAt], order: DESC }) {
       edges {
         node {
           id

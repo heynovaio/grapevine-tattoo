@@ -19,8 +19,8 @@ function AboveTheFold ({  }) {
     <section className={styles.aboveTheFold}>
       <Container>
         <h1 className={styles.tagline}>A tattoo experience as unique as you.</h1>
-        <p className={styles.heading}>Whether it is your first tattoo or your twentieth, Grapevine will provide an experience like no other studio, tailored to meet your needs.</p>
-        <button className={styles.primary}>Consult with an Artist</button>
+        <p className={styles.heading}>Whether it is your first tattoo or your twentieth, The Grapevine will provide an experience like no other studio, tailored to meet your needs.</p>
+        <a href="mailto:info@grapevine.com?subject=Consult%20an%20Artist" className={styles.primary}>Consult with an Artist</a>
       </Container>
       <div className={styles.bgImg}>
         <AliceCarousel
@@ -33,15 +33,6 @@ function AboveTheFold ({  }) {
           stopAutoPlayOnHover={false}
           autoPlayInterval={6000}>
 
-           <div role="presentation" onDragStart={handleOnDragStart} className={styles.item}>
-            <img alt="" role="presentation" src={BgImg2} />
-          </div>
-          <div role="presentation" onDragStart={handleOnDragStart} className={styles.item}>
-            <img alt="" role="presentation" src={BgImg1} />
-          </div>
-          <div role="presentation" onDragStart={handleOnDragStart} className={styles.item}>
-            <img alt="" role="presentation" src={BgImg3} />
-          </div>
           <div role="presentation" onDragStart={handleOnDragStart} className={styles.item}>
             <img alt="" role="presentation" src={BgImg4} />
           </div>
