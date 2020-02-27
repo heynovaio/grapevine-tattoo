@@ -65,5 +65,9 @@
   @nest & img {
     width: auto;
     max-height: 100%;
+    @media (--media-max-medium) {
+      max-width: 100%;
+      max-height: inherit;
+    }
   }
 }

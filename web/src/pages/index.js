@@ -211,10 +211,9 @@ const IndexPage = props => {
           browseMoreHref='/blog/'
         />
       )}
-      <Shop />
       <Subscribe/>
+      <Shop />
       <SocialContainer nodes={allInstaNode} />
-
     </Layout>
   )
 }

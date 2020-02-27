@@ -32,8 +32,8 @@
       height: 100%;
       width: 100%;
       object-fit: cover;
-      object-position: 50% 50%;
-      filter: blur(1.5px);
+      object-position: 50% 55%;
+      filter: blur(1.3px);
     }
     @nest &::after {
       content: '';
@@ -79,6 +79,10 @@
     text-align: left;
     margin-bottom: 40px;
     @nest & img{
+      max-width: 100%;
+    }
+    @media (--media-max-medium) {
+      width: auto;
       max-width: 100%;
     }
   }

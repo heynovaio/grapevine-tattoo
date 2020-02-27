@@ -76,7 +76,7 @@ const ContactPage = props => {
               <p className={cn(paragraph, styles.text)}>
                 We’d love to hear from you! Drop us a line and we’ll get back to you as soon as we can. If there’s a specific artist you’d like to hear from, be sure to let us know!
               </p>
-              <form action="https://formspree.io/kirsten@heynova.io" method="POST">
+              <form action="https://formspree.io/info@grapevinetattoo.com" method="POST">
                 <label to="name">Name</label>
                 <input id="name" name="name" type="text" className={styles.name}/>
                 <label to="email">Email</label>
@@ -106,7 +106,7 @@ const ContactPage = props => {
                 </li>
                 <li>
                   <FontAwesomeIcon icon={faEnvelope} />
-                  <a href="mailto:info@grapevine.com?subject=Contact%20Form%20Message">info@grapevine.com</a>
+                  <a href="mailto:info@grapevinetattoo.com?subject=Contact%20Form%20Message">info@grapevinetattoo.com</a>
                 </li>
               </ul>
 

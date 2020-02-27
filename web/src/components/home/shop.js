@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import { cn, buildImageObj } from '../../lib/helpers'
 import BlockContent from './../block-content'
 import Container from './../container'
+import ShopSlider from './shop-slider'
 
 import { headline, heading, headlineBg, paragraph, gridTitle } from '../../components/typography.module.css'
 import styles from './shop.module.css'
@@ -30,6 +31,7 @@ function Shop ({  }) {
           <Link className={styles.link} to='/about/'>Read More About Us</Link>
         </div>
       </Container>
+      <ShopSlider/>
     </section>
   )
 }

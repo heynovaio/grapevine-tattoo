@@ -98,7 +98,7 @@ function Artist (props) {
                 <li>
                 {props.instagram && (
                   <a href={cnUrl('https://www.instagram.com/',props.instagram )} target="_blank" className={styles.socialLink}>
-                      <p>{props.instagram}</p>
+                      <p>@{props.instagram}</p>
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
                 )}
@@ -106,7 +106,7 @@ function Artist (props) {
                 <li>
                 {props.facebook && (
                   <a href={cnUrl('https://www.facebook.com/',props.facebook )} target="_blank" className={styles.socialLink}>
-                      <p>{props.facebook}</p>
+                      <p>/{props.facebook}</p>
                     <FontAwesomeIcon icon={faFacebookSquare} />
                   </a>
                 )}

@@ -46,7 +46,7 @@ function Timeline(props) {
 			    		{item.image && (
                 <img
                   src={imageUrlFor(buildImageObj(item.image))
-                    .width(296)
+                    .width(500)
                     .url()}
                 />
               )}

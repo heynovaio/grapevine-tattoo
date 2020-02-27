@@ -1,0 +1,32 @@
+@import '../../styles/media-queries.css';
+@import '../../styles/vars.css';
+@import './../../styles/btn.css';
+
+.box{
+  padding: 30px 0 75px 0;
+}
+
+.shopCopy {
+  font-size: 18px;
+  max-width: 650px;
+}
+
+.link {
+  color: #ca9b46;
+  display: inline-block;
+  border-bottom: 1px solid #ca9b46;
+  font-size: 18px;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.item {
+  margin-right: 10px;
+  margin-bottom: -2px;
+  @nest & img {
+    max-width: 100%;
+    display: block;
+    margin-bottom: -2px;
+    filter: grayscale(.8) contrast(1.1);
+  }
+}

@@ -20,7 +20,7 @@ function AboveTheFold ({  }) {
       <Container>
         <h1 className={styles.tagline}>A tattoo experience as unique as you.</h1>
         <p className={styles.heading}>Whether it is your first tattoo or your twentieth, The Grapevine will provide an experience like no other studio, tailored to meet your needs.</p>
-        <a href="mailto:info@grapevine.com?subject=Consult%20an%20Artist" className={styles.primary}>Consult with an Artist</a>
+        <a href="mailto:info@grapevinetattoo.com?subject=Consult%20an%20Artist" className={styles.primary}>Consult with an Artist</a>
       </Container>
       <div className={styles.bgImg}>
         <AliceCarousel

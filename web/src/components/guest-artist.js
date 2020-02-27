@@ -25,6 +25,7 @@ function GuestArtist (props) {
             {props.mainImage && (
               <img
                 src={imageUrlFor(buildImageObj(mainImage))
+                  .width(1400)
                   .url()}
                 alt={mainImage.alt}
               />
@@ -53,7 +54,9 @@ function GuestArtist (props) {
               {props.image && (
                 <img
                   src={imageUrlFor(buildImageObj(image))
+                    .width(296)
                     .url()}
+
                   alt={image.alt}
                 />
               )}
