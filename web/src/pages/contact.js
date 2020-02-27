@@ -102,7 +102,7 @@ const ContactPage = props => {
                 </li>
                 <li>
                   <FontAwesomeIcon icon={faPhone} />
-                  <a href="tel:1-250-542-6293">1-250-542-6293</a>
+                  <a href="tel:1.604.620.0777">1 604 620 0777</a>
                 </li>
                 <li>
                   <FontAwesomeIcon icon={faEnvelope} />

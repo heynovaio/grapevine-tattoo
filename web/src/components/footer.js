@@ -42,7 +42,9 @@ function Footer ({  }) {
               </li>
             </ul>
             <ul className={styles.contact}>
-            	<li><span>PHONE: </span>1-250-542-6293</li>
+            	<li><span>PHONE: </span>
+                <a className={styles.emailLink} href="tel:1.604.620.0777">
+                  1 604 620 0777</a></li>
             	<li><span>E-MAIL: </span>
             		<a className={styles.emailLink} href="mailto:info@grapevinetattoo.com?subject=Email%20from%20Website">
             			info@grapevinetattoo.com</a>
