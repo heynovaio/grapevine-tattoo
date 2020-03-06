@@ -25,6 +25,7 @@
     "dotenv": "^8.1.0",
     "gatsby": "^2.9.11",
     "gatsby-image": "^2.0.41",
+    "gatsby-plugin-google-analytics": "^2.1.37",
     "gatsby-plugin-postcss": "^2.0.7",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-sharp": "^2.3.13",
