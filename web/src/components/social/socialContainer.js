@@ -23,21 +23,21 @@ export const SocialContainer = ({ nodes }) => {
         </div>
         <ul className={styles.social}>
           <li>
-            <a href="https://www.youtube.com/watch?v=7xCTAqcATx8" target="_blank" className={styles.socialLink}>
+            <a href="https://www.youtube.com/watch?v=7xCTAqcATx8" rel="noreferrer" target="_blank" className={styles.socialLink}>
               <FontAwesomeIcon icon={faYoutubeSquare} />
               <span>Youtube Video</span>
             </a>
           </li>
 
           <li>
-            <a href="https://www.instagram.com/grapevinetattoo/" target="_blank" className={styles.socialLink}>
+            <a href="https://www.instagram.com/grapevinetattoo/" rel="noreferrer" target="_blank" className={styles.socialLink}>
               <FontAwesomeIcon icon={faInstagram} />
               <span>@grapevinetatoo</span>
             </a>
           </li>
 
           <li>
-            <a href="https://www.facebook.com/grapevinetattoo/" target="_blank" className={styles.socialLink}>
+            <a href="https://www.facebook.com/grapevinetattoo/" rel="noreferrer" target="_blank" className={styles.socialLink}>
               <FontAwesomeIcon icon={faFacebookSquare} />
               <span>/grapevinetattoo</span>
             </a>
