@@ -7,7 +7,7 @@ import styles from './slide-side-bar.module.css'
 
 const SlideSideBar = ({ onHideNav, onShowNav, showNav }) => (
   <aside className={styles.sideBar}>
-    <button name="menu" className={styles.toggleNavButton} onClick={showNav ? onHideNav : onShowNav}>
+    <button title="Navigation Menu" name="Navigation Menu" className={styles.toggleNavButton} onClick={showNav ? onHideNav : onShowNav}>
       <span></span>
       <span></span>
       <span></span>

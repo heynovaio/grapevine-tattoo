@@ -24,19 +24,19 @@ function Footer ({  }) {
 					<div className={styles.icons}>
 						<ul className={styles.social}>
               <li>
-                <a href='https://www.youtube.com/watch?v=7xCTAqcATx8' target="_blank" className={styles.socialLink}>
+                <a href='https://www.youtube.com/watch?v=7xCTAqcATx8' rel="noreferrer" target="_blank" className={styles.socialLink}>
                   <FontAwesomeIcon title="youtube link" icon={faYoutubeSquare} />
                 </a>
               </li>
 
               <li>
-                <a href='https://www.instagram.com/grapevinetattoo/' target="_blank" className={styles.socialLink}>
+                <a href='https://www.instagram.com/grapevinetattoo/' rel="noreferrer" target="_blank" className={styles.socialLink}>
                   <FontAwesomeIcon title="instagram link" icon={faInstagram} />
                 </a>
               </li>
 
               <li>
-                <a href='https://www.facebook.com/grapevinetattoo/' target="_blank" className={styles.socialLink}>
+                <a href='https://www.facebook.com/grapevinetattoo/' rel="noreferrer" target="_blank" className={styles.socialLink}>
                   <FontAwesomeIcon title="facebook link" icon={faFacebookSquare} />
                 </a>
               </li>
