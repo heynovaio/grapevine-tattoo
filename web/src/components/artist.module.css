@@ -26,6 +26,10 @@
     margin: 0 auto;
     display: block;
     text-align: center;
+    @nest & > div {
+      height: 70vh;
+      min-height: 600px;
+    }
     @nest & img {
       display: block;
       position: relative;
