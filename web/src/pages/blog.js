@@ -37,6 +37,9 @@ export const query = graphql`
               width
             }
             asset {
+              fluid(maxWidth: 576) {
+                ...GatsbySanityImageFluid_noBase64
+              }
               _id
             }
             alt

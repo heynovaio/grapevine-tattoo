@@ -65,6 +65,9 @@ export const query = graphql`
           id
           image {
             asset {
+              fluid(maxWidth: 270) {
+                ...GatsbySanityImageFluid_noBase64
+              }
               _id
             }
             alt
@@ -84,6 +87,9 @@ export const query = graphql`
           id
           image {
             asset {
+              fluid(maxWidth: 270) {
+                ...GatsbySanityImageFluid_noBase64
+              }
               _id
             }
             alt
@@ -120,6 +126,9 @@ export const query = graphql`
               width
             }
             asset {
+              fluid(maxWidth: 572) {
+                ...GatsbySanityImageFluid_noBase64
+              }
               _id
             }
             alt

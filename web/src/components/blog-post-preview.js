@@ -1,5 +1,6 @@
 import { format, distanceInWords, differenceInDays } from 'date-fns'
 import { Link } from 'gatsby'
+import Img from "gatsby-image"
 import React from 'react'
 import { buildImageObj, cn, getBlogUrl } from '../lib/helpers'
 import { imageUrlFor } from '../lib/image-url'
@@ -13,12 +14,10 @@ function BlogPostPreview (props) {
     <Link className={styles.root} to={getBlogUrl(props.publishedAt, props.slug.current)}>
       <div className={styles.leadMediaThumb}>
         {props.mainImage && props.mainImage.asset && (
-          <img
-            src={imageUrlFor(buildImageObj(props.mainImage))
-              .width(600)
-              .height(338)
-              .url()}
+          <Img
             alt={props.mainImage.alt}
+            role="presentation"
+            fluid={props.mainImage.asset.fluid}
           />
         )}
       </div>

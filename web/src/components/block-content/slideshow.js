@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { buildImageObj } from '../../lib/helpers'
 import { imageUrlFor } from '../../lib/image-url'
+import Img from "gatsby-image"
 
 import styles from './slideshow.module.css'
 

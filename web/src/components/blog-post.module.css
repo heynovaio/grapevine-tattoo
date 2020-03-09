@@ -33,13 +33,14 @@
 
 .mainImage {
   position: relative;
-  background: #eee;
-  padding-bottom: calc(9 / 16 * 40%);
-  /* max-height: 300px; */
+  background: #1c2127;
   overflow: hidden;
-  margin-bottom: -2px;
   @media (--media-max-small) {
     padding-bottom: 270px;
+  }
+  @nest & > div {
+    height: 40vh;
+    min-height: 400px;
   }
   @nest &:after {
     content: '';

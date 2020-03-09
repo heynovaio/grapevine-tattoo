@@ -16,6 +16,7 @@
       content: '';
       width: 100%;
       height: 100%;
+      top: 0;
       position: absolute;
     }
   }
@@ -40,7 +41,6 @@
 
 .leadMediaThumb {
   position: relative;
-  padding-bottom: 50%;
   background: #eee;
 
   @nest & img {
@@ -50,7 +50,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: all .25s;
+    transition: all .25s!important;
     filter: contrast(1.4) grayscale(1);
   }
 }

@@ -4,6 +4,7 @@ import React from 'react'
 import { cn, buildImageObj } from '../lib/helpers'
 import { imageUrlFor } from '../lib/image-url'
 import BlockText from './block-text'
+import Img from "gatsby-image"
 
 import styles from './artist-preview.module.css'
 import { responsiveTitle3 } from './typography.module.css'
@@ -18,13 +19,12 @@ function GuestArtistPreview (props) {
       )}
       <div className={styles.leadMediaThumb}>
         {props.image && props.image.asset && (
-          <img
+          <Img
+            width={270}
+            height={270}
             alt=""
             role="presentation"
-            src={imageUrlFor(buildImageObj(props.image))
-              .width(278)
-              .height(352)
-              .url()}
+            fluid={props.image.asset.fluid}
           />
         )}
       </div>

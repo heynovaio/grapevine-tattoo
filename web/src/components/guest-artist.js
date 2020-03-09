@@ -1,6 +1,7 @@
 import { format, distanceInWords, differenceInDays } from 'date-fns'
 import React from 'react'
 import { Link } from 'gatsby'
+import Img from "gatsby-image"
 import { cn, buildImageObj } from '../lib/helpers'
 import { imageUrlFor } from '../lib/image-url'
 import BlockContent from './block-content'
@@ -23,11 +24,10 @@ function GuestArtist (props) {
         <div className={styles.abovethefold}>
           <div className={styles.mainImage}>
             {props.mainImage && (
-              <img
-                src={imageUrlFor(buildImageObj(mainImage))
-                  .width(1400)
-                  .url()}
+              <Img
                 alt={mainImage.alt}
+                role="presentation"
+                fluid={props.mainImage.asset.fluid}
               />
             )}
           </div>
@@ -52,12 +52,10 @@ function GuestArtist (props) {
           <div className={styles.aboutartist}>
             <div className={styles.imagebox}>
               {props.image && (
-                <img
-                  src={imageUrlFor(buildImageObj(image))
-                    .width(296)
-                    .url()}
-
+                <Img
                   alt={image.alt}
+                  role="presentation"
+                  fluid={props.image.asset.fluid}
                 />
               )}
             </div>

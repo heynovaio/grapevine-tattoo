@@ -20,14 +20,19 @@ export const query = graphql`
           title
           image {
             asset {
+              fluid(maxWidth: 270) {
+                ...GatsbySanityImageFluid_noBase64
+              }
               _id
             }
             alt
           }
           mainImage {
             asset {
+              fluid(maxWidth: 1600) {
+                ...GatsbySanityImageFluid_noBase64
+              }
               _id
-
             }
             alt
           }

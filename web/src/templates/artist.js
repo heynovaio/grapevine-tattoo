@@ -13,6 +13,9 @@ export const query = graphql`
       publishedAt
       image {
         asset {
+          fluid(maxWidth: 270) {
+            ...GatsbySanityImageFluid_noBase64
+          }
           _id
         }
         alt
@@ -25,6 +28,9 @@ export const query = graphql`
       }
       mainImage {
         asset {
+          fluid(maxWidth: 1600) {
+            ...GatsbySanityImageFluid_noBase64
+          }
           _id
         }
         alt
@@ -43,6 +49,9 @@ export const query = graphql`
         _type
         slides{
           asset{
+            fixed(width: 600) {
+              ...GatsbySanityImageFixed_noBase64
+            }
             _id
           }
         }

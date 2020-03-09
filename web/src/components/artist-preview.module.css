@@ -6,6 +6,7 @@
     position: relative;
     overflow: hidden;
     transition: all .25s;
+    height: 270px;
   }
   @nest &:hover {
     @nest & img {
@@ -17,6 +18,7 @@
       width: 100%;
       height: 100%;
       position: absolute;
+      top: 0;
     }
   }
 }
@@ -31,7 +33,6 @@
 
 .leadMediaThumb {
   position: relative;
-  padding-bottom: 100%;
   background: #eee;
 
   @nest & img {
@@ -41,7 +42,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: all .25s;
+    transition: all .25s!important;
   }
 }
 
