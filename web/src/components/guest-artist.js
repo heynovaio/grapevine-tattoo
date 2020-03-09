@@ -2,7 +2,7 @@ import { format, distanceInWords, differenceInDays } from 'date-fns'
 import React from 'react'
 import { Link } from 'gatsby'
 import Img from "gatsby-image"
-import { cn, buildImageObj } from '../lib/helpers'
+import { cn, cnUrl, buildImageObj } from '../lib/helpers'
 import { imageUrlFor } from '../lib/image-url'
 import BlockContent from './block-content'
 import Slideshow from './block-content/slideshow'
@@ -85,33 +85,33 @@ function GuestArtist (props) {
               <ul>
                 <li>
                 {props.youtube && (
-                  <Link to='/' className={styles.socialLink}>
-                      <p>{props.youtube}</p>
+                  <a href={cnUrl('https://www.youtube.com/',props.youtube )} className={styles.socialLink}>
+                    <p>{props.youtube}</p>
                     <FontAwesomeIcon icon={faYoutubeSquare} />
-                  </Link>
+                  </a>
                 )}
                 </li>
                 <li>
                 {props.instagram && (
-                  <Link to='/' className={styles.socialLink}>
-                      <p>{props.instagram}</p>
+                  <a href={cnUrl('https://www.instagram.com/',props.instagram )} className={styles.socialLink}>
+                    <p>{props.instagram}</p>
                     <FontAwesomeIcon icon={faInstagram} />
-                  </Link>
+                  </a>
                 )}
                 </li>
                 <li>
                 {props.facebook && (
-                  <Link to='/' className={styles.socialLink}>
-                      <p>{props.facebook}</p>
+                  <a href={cnUrl('https://www.facebook.com/',props.facebook )}  className={styles.socialLink}>
+                    <p>{props.facebook}</p>
                     <FontAwesomeIcon icon={faFacebookSquare} />
-                  </Link>
+                  </a>
                 )}
                 </li>
 
               </ul>
               {props.email && (
-                <button className={styles.primary} href={email}>
-                  Contact Directly</button>
+                <a className={styles.primary} href={cnUrl('mailto:',props.email )}>
+                  Contact Directly</a>
               )}
             </div>
           </div>
