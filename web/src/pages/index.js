@@ -142,21 +142,6 @@ export const query = graphql`
         }
       }
     }
-
-    allInstaNode(filter: { username: { eq: "grapevinetattoo" } }) {
-      edges {
-        node {
-          username
-          localFile {
-            childImageSharp {
-              fluid(quality: 70, maxWidth: 600, maxHeight: 600) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
-        }
-      }
-    }
   }
 `
 
@@ -170,7 +155,7 @@ const IndexPage = props => {
       </Layout>
     )
   }
-  const allInstaNode = (data || {}).allInstaNode
+
   const site = (data || {}).site
   const postNodes = (data || {}).posts
     ? mapEdgesToNodes(data.posts).filter(filterOutDocsWithoutSlugs)
@@ -222,7 +207,6 @@ const IndexPage = props => {
       )}
       <Subscribe/>
       <Shop />
-      <SocialContainer nodes={allInstaNode} />
     </Layout>
   )
 }

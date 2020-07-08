@@ -36,12 +36,6 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-     {
-      resolve: `gatsby-source-instagram`,
-      options: {
-        username: `grapevinetattoo`,
-      },
-    },
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
