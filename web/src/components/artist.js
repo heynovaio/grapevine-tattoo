@@ -119,7 +119,9 @@ function Artist (props) {
               )}
             </div>
           </div>
-          {_rawBody && <BlockContent blocks={_rawBody || []}/>}
+          <div className={styles.bio}>
+            {_rawBody && <BlockContent blocks={_rawBody || []}/>}
+          </div>
         </Container>
         {props.gallery && (
           <Container>

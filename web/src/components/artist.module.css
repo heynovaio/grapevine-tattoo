@@ -163,6 +163,12 @@
   }
 }
 
+.bio {
+  @nest & a {
+    color: #fff;
+  }
+}
+
 .videoLink {
   display: none;
 }
